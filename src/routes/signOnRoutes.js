@@ -1,5 +1,5 @@
 import postSignOn from '../controllers/signOnController.js';
-import { signOnValidation } from '../assets/middlewares.js';
+import { signOnValidation } from '../untils/middlewares.js';
 import { Router } from 'express';
 
 const signOnRouter = Router();

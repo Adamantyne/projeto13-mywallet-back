@@ -12,3 +12,13 @@ export const signOnSchema = joi.object({
     password: joi.string().required(),
     repeatPassword: joi.string().required()
 });
+export const transactionPostSchema = joi.object({
+    email: joi.string().pattern(validEmail).required(),
+    date: joi.string().required(),
+    tittle: joi.string().required(),
+    value: joi.string().required(),
+    type: joi.string().valid("in","out").required()
+});
+export const deleteSchema = joi.object({
+    id: joi.string().required()
+});
